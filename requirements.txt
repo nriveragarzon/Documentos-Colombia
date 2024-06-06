@@ -1,0 +1,17 @@
+from docx import Document
+
+# Supongamos que 'doc' es tu objeto Document y 'NORMAL_STYLE_NAME' es tu estilo normal definido
+def add_paragraph_with_bold_number(doc, year_cerrado, df_nme):
+    paragraph = doc.add_paragraph(f'Número de empresas exportadoras en {str(year_cerrado)}: ', style=NORMAL_STYLE_NAME)
+    
+    # Añadir el número en negrilla
+    run = paragraph.add_run(f'{str(df_nme["Numero de Empresas Cerrado"][0][1])} empresas')
+    run.bold = True
+
+# Ejemplo de uso
+doc = Document()
+year_cerrado = 2023
+df_nme = {'Numero de Empresas Cerrado': [(None, 123)]}  # Ejemplo de datos, reemplaza con tus datos reales
+
+add_paragraph_with_bold_number(doc, year_cerrado, df_nme)
+doc.save('output.docx')
