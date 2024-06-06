@@ -20,6 +20,11 @@ import io
 # # Configuración página web
 st.set_page_config(page_title="Documentos Tres Ejes", page_icon = ':bar_chart:', layout="wide",  initial_sidebar_state="expanded")
 
+# Secrets
+def cargar_contraseñas(nombre_archivo):
+    return st.secrets
+cargar_contraseñas(".streamlit/secrets.toml")
+
 # Datos de sesión de Snowflake
 connection = st.connection("snowflake")
 sesion_activa = connection.session()
