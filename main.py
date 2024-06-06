@@ -41,7 +41,7 @@ def main():
     ## Menú de navegación
     ### Logo ProColombia
     with st.sidebar:
-        url = r'Insumos/Procolombia/PRO_PRINCIPAL_HORZ_PNG.png'
+        url = r'PRO_PRINCIPAL_HORZ_PNG.png'
         st.image(url, caption=None, use_column_width="always")
         st.markdown('#')     
     ## Páginas
@@ -68,7 +68,7 @@ def main():
         st.subheader("Elaborado por:") 
         st.write("Coordinación de Analítica, Gerencia de Inteligencia Comercial, ProColombia.") 
         st.markdown('#') 
-        url2 = r'Insumos/Logo Ministerio Comercio, Industria y Turismo/Logo MinCit_Mesa de trabajo 1.png'
+        url2 = r'Logo MinCit_Mesa de trabajo 1.png'
         st.image(url2, caption=None, use_column_width="always")
 
 ###############
@@ -178,9 +178,9 @@ def documentos():
             file_path = f"Tres Ejes Continentes - {continente_elegido}.docx"
             doc.create_document_continentes(df_total=df_total, df_nme=df_nme, file_path=file_path, titulo=continente_elegido, 
                                                fecha=fecha_actualizacion, 
-                                               header_image_left=r'Insumos/Procolombia/PRO_PRINCIPAL_HORZ_PNG.png', 
-                                               header_image_right=r'Insumos/Logo Ministerio Comercio, Industria y Turismo/Logo MinCit_Mesa de trabajo 1.png', 
-                                               footer_image=r'Insumos/Logo Marca País/Logo_MP_EPDLB2.png', 
+                                               header_image_left=r'PRO_PRINCIPAL_HORZ_PNG.png', 
+                                               header_image_right=r'Logo MinCit_Mesa de trabajo 1.png', 
+                                               footer_image=r'Logo_MP_EPDLB2.png', 
                                                year_cerrado=year_cerrado, year_corrido=year_corrido)
             with open(file_path, 'rb') as f:
                 doc_bytes = io.BytesIO(f.read())
@@ -225,9 +225,9 @@ def documentos():
             file_path = f"Tres Ejes HUBs - {hub_elegido}.docx"
             doc.create_document_hub(df_total=df_total, df_nme=df_nme, file_path=file_path, titulo=hub_elegido, 
                                                fecha=fecha_actualizacion, 
-                                               header_image_left=r'Insumos/Procolombia/PRO_PRINCIPAL_HORZ_PNG.png', 
-                                               header_image_right=r'Insumos/Logo Ministerio Comercio, Industria y Turismo/Logo MinCit_Mesa de trabajo 1.png', 
-                                               footer_image=r'Insumos/Logo Marca País/Logo_MP_EPDLB2.png', 
+                                               header_image_left=r'PRO_PRINCIPAL_HORZ_PNG.png', 
+                                               header_image_right=r'Logo MinCit_Mesa de trabajo 1.png', 
+                                               footer_image=r'Logo_MP_EPDLB2.png', 
                                                year_cerrado=year_cerrado, year_corrido=year_corrido)
             with open(file_path, 'rb') as f:
                 doc_bytes = io.BytesIO(f.read())
@@ -260,9 +260,9 @@ def documentos():
             file_path = f"Tres Ejes Países - {pais_elegido}.docx"
             doc.create_document_pais(df_total=df_total, df_nme=df_nme, file_path=file_path, titulo=pais_elegido, 
                                                fecha=fecha_actualizacion, 
-                                               header_image_left=r'Insumos/Procolombia/PRO_PRINCIPAL_HORZ_PNG.png', 
-                                               header_image_right=r'Insumos/Logo Ministerio Comercio, Industria y Turismo/Logo MinCit_Mesa de trabajo 1.png', 
-                                               footer_image=r'Insumos/Logo Marca País/Logo_MP_EPDLB2.png', 
+                                               header_image_left=r'PRO_PRINCIPAL_HORZ_PNG.png', 
+                                               header_image_right=r'Logo MinCit_Mesa de trabajo 1.png', 
+                                               footer_image=r'Logo_MP_EPDLB2.png', 
                                                year_cerrado=year_cerrado, year_corrido=year_corrido)
             with open(file_path, 'rb') as f:
                 doc_bytes = io.BytesIO(f.read())
@@ -292,9 +292,9 @@ def documentos():
             file_path = f"Tres Ejes Colombia.docx"
             doc.create_document_colombia(df_total=df_total, df_nme=df_nme, file_path=file_path,
                                                fecha=fecha_actualizacion, 
-                                               header_image_left=r'Insumos/Procolombia/PRO_PRINCIPAL_HORZ_PNG.png', 
-                                               header_image_right=r'Insumos/Logo Ministerio Comercio, Industria y Turismo/Logo MinCit_Mesa de trabajo 1.png', 
-                                               footer_image=r'Insumos/Logo Marca País/Logo_MP_EPDLB2.png', 
+                                               header_image_left=r'PRO_PRINCIPAL_HORZ_PNG.png', 
+                                               header_image_right=r'Logo MinCit_Mesa de trabajo 1.png', 
+                                               footer_image=r'Logo_MP_EPDLB2.png', 
                                                year_cerrado=year_cerrado, year_corrido=year_corrido)
             with open(file_path, 'rb') as f:
                 doc_bytes = io.BytesIO(f.read())
@@ -327,9 +327,9 @@ def documentos():
             file_path = f"Tres Ejes Departamentos - {departamento_elegido}.docx"
             doc.create_document_departamento(df_total=df_total, df_nme=df_nme, file_path=file_path, titulo=departamento_elegido, 
                                                fecha=fecha_actualizacion, 
-                                               header_image_left=r'Insumos/Procolombia/PRO_PRINCIPAL_HORZ_PNG.png', 
-                                               header_image_right=r'Insumos/Logo Ministerio Comercio, Industria y Turismo/Logo MinCit_Mesa de trabajo 1.png', 
-                                               footer_image=r'Insumos/Logo Marca País/Logo_MP_EPDLB2.png', 
+                                               header_image_left=r'PRO_PRINCIPAL_HORZ_PNG.png', 
+                                               header_image_right=r'Logo MinCit_Mesa de trabajo 1.png', 
+                                               footer_image=r'Logo_MP_EPDLB2.png', 
                                                year_cerrado=year_cerrado, year_corrido=year_corrido)
             with open(file_path, 'rb') as f:
                 doc_bytes = io.BytesIO(f.read())
