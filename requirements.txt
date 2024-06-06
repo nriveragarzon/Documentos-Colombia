@@ -4,5 +4,3 @@ numpy
 snowflake-connector-python
 snowflake-snowpark-python
 python-docx
-docx2pdf
-pythoncom

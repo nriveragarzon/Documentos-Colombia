@@ -14,8 +14,8 @@ import documentos as doc
 import streamlit as st
 import pandas as pd
 import io
-from docx2pdf import convert
-import pythoncom
+# from docx2pdf import convert
+# import pythoncom
 
 # # Configuración página web
 st.set_page_config(page_title="Documentos Tres Ejes", page_icon = ':bar_chart:', layout="wide",  initial_sidebar_state="expanded")
@@ -104,12 +104,12 @@ departamentos_base = None
 hubs_base = None
 
 # Función para volver a pdf con entorno web
-def convert_to_pdf(docx_path, pdf_path):
-    pythoncom.CoInitialize()  # Inicializar COM
-    try:
-        convert(docx_path, pdf_path)
-    finally:
-        pythoncom.CoUninitialize()  # Desinicializar COM
+# def convert_to_pdf(docx_path, pdf_path):
+#     pythoncom.CoInitialize()  # Inicializar COM
+#     try:
+#         convert(docx_path, pdf_path)
+#     finally:
+#         pythoncom.CoUninitialize()  # Desinicializar COM
 
 ##############
 # 3. Contenido
@@ -185,17 +185,17 @@ def documentos():
                 file_name=file_path,
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
             # Generar el pdf
-            pdf_file_path = file_path.replace('.docx', '.pdf')
-            convert_to_pdf(file_path, pdf_file_path)
-            # Cargar el documento PDF para descarga
-            with open(pdf_file_path, 'rb') as f:
-                pdf_bytes = io.BytesIO(f.read())
-            st.download_button(
-                label="Descargar Documento en PDF",
-                data=pdf_bytes,
-                file_name=pdf_file_path,
-                mime="application/pdf"
-            )
+            # pdf_file_path = file_path.replace('.docx', '.pdf')
+            # convert_to_pdf(file_path, pdf_file_path)
+            # # Cargar el documento PDF para descarga
+            # with open(pdf_file_path, 'rb') as f:
+            #     pdf_bytes = io.BytesIO(f.read())
+            # st.download_button(
+            #     label="Descargar Documento en PDF",
+            #     data=pdf_bytes,
+            #     file_name=pdf_file_path,
+            #     mime="application/pdf"
+            # )
 
 
     # HUB
@@ -231,19 +231,7 @@ def documentos():
                 data=doc_bytes,
                 file_name=file_path,
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-            # Generar el pdf
-            pdf_file_path = file_path.replace('.docx', '.pdf')
-            convert_to_pdf(file_path, pdf_file_path)
-            # Cargar el documento PDF para descarga
-            with open(pdf_file_path, 'rb') as f:
-                pdf_bytes = io.BytesIO(f.read())
-            st.download_button(
-                label="Descargar Documento en PDF",
-                data=pdf_bytes,
-                file_name=pdf_file_path,
-                mime="application/pdf"
-            )
-
+            
     # País
     if eleccion_usuario == "**País:** Explore un informe organizado por país.":
         continente_pais = st.selectbox('Seleccione un continente:', selectores.selector_continentes(sesion_activa), index=None, placeholder='Elija una opción', help = 'Aquí puede elegir el continente para descargar el informe de interés. Seleccione un único continente para refinar su búsqueda.', key = 'widget_continentes_pais')
@@ -278,18 +266,7 @@ def documentos():
                 data=doc_bytes,
                 file_name=file_path,
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-            # Generar el pdf
-            pdf_file_path = file_path.replace('.docx', '.pdf')
-            convert_to_pdf(file_path, pdf_file_path)
-            # Cargar el documento PDF para descarga
-            with open(pdf_file_path, 'rb') as f:
-                pdf_bytes = io.BytesIO(f.read())
-            st.download_button(
-                label="Descargar Documento en PDF",
-                data=pdf_bytes,
-                file_name=pdf_file_path,
-                mime="application/pdf"
-            )
+            
 
     # Colombia 
     if eleccion_usuario =="**Colombia:** Explore un informe organizado de Colombia.":
@@ -321,18 +298,7 @@ def documentos():
                 data=doc_bytes,
                 file_name=file_path,
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-            # Generar el pdf
-            pdf_file_path = file_path.replace('.docx', '.pdf')
-            convert_to_pdf(file_path, pdf_file_path)
-            # Cargar el documento PDF para descarga
-            with open(pdf_file_path, 'rb') as f:
-                pdf_bytes = io.BytesIO(f.read())
-            st.download_button(
-                label="Descargar Documento en PDF",
-                data=pdf_bytes,
-                file_name=pdf_file_path,
-                mime="application/pdf"
-            )
+            
 
     # Departamento
     if eleccion_usuario == "**Departamento:** Explore un informe organizado por departamento.":
@@ -367,18 +333,7 @@ def documentos():
                 data=doc_bytes,
                 file_name=file_path,
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-            # Generar el pdf
-            pdf_file_path = file_path.replace('.docx', '.pdf')
-            convert_to_pdf(file_path, pdf_file_path)
-            # Cargar el documento PDF para descarga
-            with open(pdf_file_path, 'rb') as f:
-                pdf_bytes = io.BytesIO(f.read())
-            st.download_button(
-                label="Descargar Documento en PDF",
-                data=pdf_bytes,
-                file_name=pdf_file_path,
-                mime="application/pdf"
-            )
+            
 #########
 # Fuentes
 #########
