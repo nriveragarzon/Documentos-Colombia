@@ -77,9 +77,9 @@ def main():
 
 # PARÁMETROS DE FECHAS (ACTUALIZAR MENSUALMENTE O ANUALMENTE)
 # MENUSUALMENTE
-year_corrido = 'enero - marzo 2024'
-fecha_actualizacion = 'MARZO 2024'
-years_corrido = ['2023(Ene-Mar)', '2024(Ene-Mar)']
+year_corrido = 'enero - abril 2024'
+fecha_actualizacion = 'ABRIL 2024'
+years_corrido = ['2023(Ene-Abr)', '2024(Ene-Abr)']
 # ANUALMENTE
 year_cerrado = '2023'
 years_cerrado = ['2022', '2023']
